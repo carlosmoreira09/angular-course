@@ -1,0 +1,36 @@
+<label>Sever Name</label>
+<br><br>
+<!-- <input type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName">
+<input
+    type="text"
+    class="form-control"
+    (input)="onUserName($event)"> -->
+
+<input
+    type="text"
+    class="form-control"
+    [(ngModel)]="userName">
+<p>{{ userName }} </p>
+
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowClick"
+    [ngSwitch]="onChangeUserName()"
+    [innerHTML]="Disable"
+    (click)="emptyString()"></button>
+<br>
+<br>
+
+<button
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Add Server</button>
+    <!-- <p [innerText]="allowServer"></p> -->
+    <p>{{ serverCreationStatus }}</p>
+ 
