@@ -1,2 +1,11 @@
-<p>PIX</p>
-<p>STATUS</p>
+<!-- <p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p> -->
+
+<button
+[innerHTML]="textButton"
+(click)="changeColor()"></button>
+
+<p [ngStyle]="{color: colorP}">Angular é massa</p>
+
+<!-- <app-servers *ngFor="let click of clicks"></app-servers> -->

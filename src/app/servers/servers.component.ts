@@ -14,6 +14,10 @@ export class ServersComponent implements OnInit {
   userName = '';
   allowClick = false;
   Disable = "Desabilitado"
+  serverCreated = false;
+  servers = ['TesteServer', 'TesteServer2', 'TestServer3'];
+  
+ 
   constructor() {
     setTimeout(() => { 
       this.allowNewServer = true;
@@ -22,8 +26,12 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
   }
+ 
   onCreateServer() { 
     this.serverCreationStatus = 'Server was created' + this.serverName;
+    this.servers.push(this.serverName);
+    this.serverCreated = true;
+
   }
   onUpdateServerName(event: any) { 
     this.serverName = (<HTMLInputElement>event.target).value;
